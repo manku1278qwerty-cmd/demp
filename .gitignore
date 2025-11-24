@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hey [Crush's Name],</h1>
+        <h1>Hey [Aashi],</h1>
         <p>I've been wanting to tell you this for a while...</p>
         <p>You make my heart skip a beat every time I see you. Your smile lights up my world, and I can't imagine my life without you in it.</p>
-        <p>Will you be my [girlfriend/boyfriend/partner]?</p>
+        <p>Will you be my [girlfriend]?</p>
         <div class="buttons">
             <button id="yesBtn">Yes!</button>
             <button id="noBtn">No</button>
