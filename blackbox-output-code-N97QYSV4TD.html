@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, [Friend's Name]!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff6b6b;
+        }
+        .countdown {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .message {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .gifts {
+            margin-top: 30px;
+        }
+        .gift {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, [Friend's Name]!</h1>
+    <p class="countdown">Countdown to your special day: <span id="countdown"></span></p>
+    <div class="message">
+        <p>Dear [Friend's Name],</p>
+        <p>[Insert your personalized birthday message here. E.g., "You've been my rock through thick and thin. Wishing you a year filled with joy, laughter, and all your dreams coming true!"]</p>
+        <p>Love, [Your Name]</p>
+    </div>
+    <div class="gifts">
+        <h2>Virtual Gifts for You</h2>
+        <div class="gift">
+            <img src="https://via.placeholder.com/100?text=Cake" alt="Cake">
+            <p>A slice of virtual cake! 🎂</p>
+        </div>
+        <div class="gift">
+            <img src="https://via.placeholder.com/100?text=Gift" alt="Gift">
+            <p>Something special just for you! 🎁</p>
+        </div>
+        <!-- Add more gifts as needed -->
+    </div>
+
+    <script>
+        // Set the birthday date (YYYY-MM-DD format)
+        const birthday = new Date('2024-12-25'); // Replace with actual birthday
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = birthday - now;
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('countdown').innerText = "It's your birthday! 🎉";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
