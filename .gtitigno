@@ -1,0 +1,13 @@
+document.getElementById('yesBtn').addEventListener('click', function() {
+    showResponse("Yay! I knew you'd say yes! 💖 Let's make some amazing memories together.");
+});
+
+document.getElementById('noBtn').addEventListener('click', function() {
+    showResponse("That's okay, but I'll always cherish our time together. 😊");
+});
+
+function showResponse(message) {
+    document.getElementById('message').textContent = message;
+    document.getElementById('response').classList.remove('hidden');
+    document.querySelector('.buttons').style.display = 'none';
+}
